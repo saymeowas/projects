@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./popup/dist/popup.css" inline>
+</head>
+
+
+
+<body>
+<div class="cq-popup__bg"></div>
+
+<div class="wrapper__body d_flex">
+    <div class="cq-popup__body d_flex flex_col">
+        <div class="cq-popup__img">
+            <img src="https://emcdn.ru/1299824/172ba23be702fc677a4b28e24e002a24b668732b4ff365412386dafd0fd1eb68/fon.png" alt="Фоновая картинка для попапа">
+        </div>
+        <a class="cq-popup__close"></a>
+        
+        <form id="form" class="cq-popup__form d_flex flex_col first-form">
+            <div class="cq-popup__form-content d_flex">
+                <div class="cq-popup__form-title d_flex flex_col">
+                    <p class="cq-popup__text-h1">Квартиры <span>от 4,1 млн. руб.</span> с чистовой отделкой в <span>Арт-кварталах Мечтателей</span></p>
+                    <p class="cq-popup__text">Чистовая отделка уже включена в цену, переезжайте и живите.</p>
+                    <p class="cq-popup__text-2">Оставьте заявку и зафиксируйте цену на старте продаж, дальше стоимость будет расти.</p>
+                </div>
+            </div>
+            <div class="cq-popup__form-inputs d_flex flex_col">
+                <input class="cq_popup-input name" type="text" name="name" placeholder="Введите имя" required>
+                <!-- <input class="cq_popup-input email" type="email" name="email" placeholder="Введите имя телефона" required> -->
+                <input class="cq_popup-input phone" type="tel" name="phone" placeholder="Введите номер телефона" required>
+                <button type="submit" class="cq-popup__button">
+                    Отправить заявку
+                </button>
+            </div>
+            <div class="eula">
+                <input type="checkbox" id="checkbox" checked>
+                <label for="checkbox">Принимаю <a href="#" target="_blank">политику конфиденциальности</a> и даю согласие на <a href="#" target="_blank">обработку персональных данных</a></label>
+            </div>
+        </form>
+           <section class="second-form hidden" id="thank">
+            <div class="cq-popup__form-title d_flex flex_col">
+                <p class="cq-popup__text-h1 thank">Спасибо, мы с вами свяжемся!</p>
+            </div>
+        </section>
+    </div>
+</div>
+<script src="./popup/dist/popup.js" inline></script>
+</body>
+</html>

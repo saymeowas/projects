@@ -1,0 +1,359 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-tap-highlight-color: transparent;
+ font-family: "Montserrat", sans-serif;
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+.cq-popup__bg {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(51, 51, 51, .5);
+  backdrop-filter: blur(10px);
+}
+
+.d_flex {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex_col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.flex_row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.success{
+  border: 1px green solid !important;
+}
+.error{
+  border: 1px red solid !important;
+}
+
+.wrapper__body {
+  --webkit-box-align: flex-end;
+  --ms-flex-align: flex-end;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.cq-popup__body {
+  position: relative;
+  z-index: 2;
+  border-radius: 20px;
+  background: #FFFFFF;
+  width: 100%;
+  max-width: 513px;  
+  margin: 15px;       
+}
+
+.cq-popup__close {
+  cursor: pointer;
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 99;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.cq-popup__close:before,
+.cq-popup__close:after {
+  background-color: #0C9AFA;
+  content: " ";
+  height: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 1px;
+  border-radius: 3px;
+}
+
+.cq-popup__close:before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.cq-popup__close:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+
+.cq-popup__img {
+flex-shrink: 0;
+  display: block;
+  width: 100%;
+  line-height: 0;
+
+  img {
+  border-radius: 20px;
+  display: block;
+  width: 100%;
+}
+}
+
+
+.cq-popup__form-content {
+  flex: 1;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  
+}
+
+.cq-popup__form-title {
+ align-items: flex-start;
+}
+
+.cq-popup__form {
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%; 
+  padding: 30px;
+}
+
+
+.cq-popup__form-inputs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.cq_popup-input{
+    width: 100%;
+    height: 45px;
+    color: #000;
+    border: none;
+    background: #F4FAFE;
+    outline: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+
+.cq-popup__text, .cq-popup__text-2 {
+width: 100%;
+color: #848585;
+font-size: 16px;
+text-align: left;
+}
+
+.cq-popup__text {
+  margin-bottom: 15px;
+}
+
+.cq-popup__text-h1 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: normal;
+    color: #010203;
+    text-align: left;
+    font-weight: 500;
+}
+
+
+.cq-popup__text-h1 span {
+font-weight: 500;
+font-size: 20px;
+color:#0C9AFA;
+}
+
+.send_email {
+  color: #000000;
+}
+
+
+.cq-popup__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0C9AFA;
+  width: 100%;
+  height: 45px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  margin-bottom: 15px;
+}
+
+
+#checkbox{
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  margin-right: 13px;
+}
+
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: 0;
+  opacity: 0.01;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 27px;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+  color: #848585;
+  cursor: pointer;
+}
+
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 13px;
+  height: 13px;
+  background: transparent;
+  border: 1px solid #0C9AFA;
+  -webkit-transition: all .275s;
+  transition: all .275s;
+  border-radius: 3px;
+}
+
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  padding: 1px;
+  content: url('data:image/svg+xml,<svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 3L2.5 5L7 0.5" stroke="%230C9AFA"/></svg>');
+  position: absolute;
+  top: 7px;
+  left: 6px;
+  font-size: 13px;
+  line-height: 0;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  background: transparent;
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+}
+
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0) rotate(45deg);
+  transform: scale(0) rotate(45deg);
+}
+
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1) rotate(0);
+  transform: scale(1) rotate(0);
+}
+
+
+.cq-popup__text-h1.thank  {
+padding: 55px 30px 55px 30px;
+ text-align: center;
+width: 100%;
+}
+
+.eula {
+ width: 100%; 
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  font-size: 10px;
+  line-height: 1.4;
+
+  & a {
+    color: #0C9AFA;   
+    text-decoration: underline; 
+  }
+}
+
+@media (max-width: 700px) {
+  .cq-popup__bg{
+    display: block;
+  }
+  .wrapper__body {
+    align-items: center;
+    justify-content: center;
+  }
+  .cq-popup__form{
+    padding: 15px 15px;
+  }
+
+  .cq-popup__close {
+    right: 20px;
+    top: 15px;
+  }
+  .cq-popup__text-h1{
+    margin-bottom: 5px;
+    max-width: 286px;
+  }
+  .cq-popup__form-title{
+    margin-bottom: 19px;
+  }
+  .cq-popup__text{
+    font-size: 16px;
+  }
+
+  .cq-popup__body {
+    max-width: 340px;
+  }
+  .cq-popup__form-inputs{
+    max-width: 300px;
+  }
+
+}
+.hidden {
+  display: none !important;
+} 
